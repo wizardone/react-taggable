@@ -1,0 +1,41 @@
+{
+  "name": "react-taggable",
+  "version": "1.0.0",
+  "description": "tags visualization",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "lint",
+    "build": "webpack",
+    "start-dev": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wizardone/react-taggable.git"
+  },
+  "keywords": [
+    "react",
+    "tags",
+    "visualizer"
+  ],
+  "author": "Stefan Slaveykov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wizardone/react-taggable/issues"
+  },
+  "homepage": "https://github.com/wizardone/react-taggable#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}

@@ -7,7 +7,7 @@
     "test": "test",
     "lint": "lint",
     "build": "webpack",
-    "start-dev": "test"
+    "start-dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-preset-stage-1": "^6.22.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
     "react": "^15.4.2",

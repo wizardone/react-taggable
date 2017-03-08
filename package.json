@@ -2,12 +2,12 @@
   "name": "react-taggable",
   "version": "1.0.0",
   "description": "tags visualization",
-  "main": "index.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "test": "test",
     "lint": "lint",
     "build": "webpack",
-    "start-dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",

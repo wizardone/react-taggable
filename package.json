@@ -7,7 +7,7 @@
     "test": "test",
     "lint": "lint",
     "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --content-base dist/ --hot"
   },
   "repository": {
     "type": "git",

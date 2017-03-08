@@ -5,7 +5,7 @@ export default class ReactTaggable extends React.Component {
 
   render(){
     return (
-      <div id="taggable-div">Tagable here</div>
+      <div id="taggable-div">Tags should be here</div>
     )
   }
 }

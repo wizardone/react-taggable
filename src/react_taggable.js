@@ -3,14 +3,20 @@ import ReactDom from 'react-dom';
 
 export default class ReactTaggable extends React.Component {
 
-  constructor(){
-    super();
-    this.state = {tags: []}
+  constructor(props){
+    super(props);
+    const { tags } = props;
+    this.state = {};
   }
 
   render(){
+    const { tags } = this.props;
     return (
-      <div id="taggable-div">Tags should be here</div>
+      <div id="taggable-div">
+      {Object.keys(tags).map((tag) => {
+        return (<a key={tag}>{tag}</a>)
+      })}
+      </div>
     )
   }
 }

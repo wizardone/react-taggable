@@ -4,7 +4,7 @@
   "description": "tags visualization",
   "main": "./dist/bundle.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha --compilers js:babel-core/register",
     "lint": "lint",
     "build": "webpack",
     "dev": "webpack-dev-server --content-base dist/ --hot"
@@ -32,6 +32,10 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-preset-stage-1": "^6.22.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.1",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   },

@@ -5,7 +5,6 @@ export default class ReactTaggable extends React.Component {
 
   constructor(props){
     super(props);
-    const { tags } = props;
     this.state = {};
   }
 
@@ -25,9 +24,9 @@ export default class ReactTaggable extends React.Component {
     const { tags } = this.props;
     return (
       <div id="taggable-div">
-      {Object.keys(tags).map((tag) => {
-        return (<a key={tag} className={this.setKlass(tags[tag])}> {tag} </a>)
-      })}
+        {Object.keys(tags).map((tag) => {
+          return (<a key={tag} className={this.setKlass(tags[tag])}>{tag}</a>)
+        })}
       </div>
     )
   }

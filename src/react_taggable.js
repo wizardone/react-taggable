@@ -6,6 +6,7 @@ export default class ReactTaggable extends React.Component {
   constructor(props){
     super(props);
     this.state = {};
+    this.weights = props.weights
   }
 
   setKlass(weight){
@@ -18,6 +19,10 @@ export default class ReactTaggable extends React.Component {
       klass = 'tag-big'
     }
     return klass;
+  }
+
+  validateWeights(){
+    
   }
 
   render(){

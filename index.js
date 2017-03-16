@@ -6,4 +6,11 @@ const tags = {
   "Car": 10,
   "TV": 2
 }
-ReactDom.render(<ReactTaggable tags={tags}/>, document.getElementById('taggable'))
+
+const weights = {
+  "tiny": 5,
+  "small": 10,
+  "medium": 15,
+  "big": 20
+}
+ReactDom.render(<ReactTaggable tags={tags} weights={weights}/>, document.getElementById('taggable'))

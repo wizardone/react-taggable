@@ -14,4 +14,8 @@ describe('<ReactTaggable />', () => {
     )).to.equal(true);
   });
 
+  it('has default weights assigned', () => {
+    
+  });
+
 })

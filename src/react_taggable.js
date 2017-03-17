@@ -36,3 +36,12 @@ export default class ReactTaggable extends React.Component {
     )
   }
 }
+
+ReactTaggable.defaultProps = {
+  weights: {
+    "tiny": 5,
+    "small": 10,
+    "medium": 15,
+    "big": 20
+  }
+}

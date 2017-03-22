@@ -9,7 +9,7 @@ export default class ReactTaggable extends React.Component {
     this.weights = props.weights
   }
 
-  setKlass(weight){
+  setWeightKlass(weight){
     let klass = '';
     if(weight <= 5){
       klass = 'tag-small'
@@ -22,7 +22,7 @@ export default class ReactTaggable extends React.Component {
   }
 
   validateWeights(){
-    
+
   }
 
   render(){
@@ -30,7 +30,7 @@ export default class ReactTaggable extends React.Component {
     return (
       <div id="taggable-div">
         {Object.keys(tags).map((tag) => {
-          return (<a key={tag} className={this.setKlass(tags[tag])}>{tag}</a>)
+          return (<a key={tag} className={this.setWeightKlass(tags[tag])}>{tag}</a>)
         })}
       </div>
     )

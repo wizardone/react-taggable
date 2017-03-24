@@ -11,6 +11,7 @@ const weights = {
   "tiny": 5,
   "small": 10,
   "medium": 15,
-  "big": 20
+  "big": 20,
+  "huge": 30
 }
 ReactDom.render(<ReactTaggable tags={tags} weights={weights}/>, document.getElementById('taggable'))

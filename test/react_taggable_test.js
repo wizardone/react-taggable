@@ -9,13 +9,21 @@ describe('<ReactTaggable />', () => {
     const wrapper = shallow(<ReactTaggable tags={tags}/>);
     expect(wrapper.matchesElement(
       <div id="taggable-div">
-        <a className='tag-small' key='Car'>Car</a>
+        <a className='tag-tiny' key='Car'>Car</a>
       </div>
     )).to.equal(true);
   });
 
   it('has default weights assigned', () => {
-    
+    const tags = {"Car": 5}
+    const wrapper = shallow(<ReactTaggable tags={tags}/>);
+    const props = wrapper.instance().props
+
+    expect(props.weights['tiny']).to.equal(5);
+    expect(props.weights['small']).to.equal(10);
+    expect(props.weights['medium']).to.equal(15);
+    expect(props.weights['big']).to.equal(20);
+    expect(props.weights['huge']).to.equal(30);
   });
 
 })

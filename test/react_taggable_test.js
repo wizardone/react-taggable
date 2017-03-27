@@ -40,43 +40,42 @@ describe('<ReactTaggable />', () => {
   });
 
   describe('#setWeightKlass', () => {
+    let tags;
+    beforeEach(() => {
+      tags = {'Car': 5};
+    });
+
     it('returns the default class based on weight', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.setWeightKlass()).to.equal('tag-default')
     })
 
     it('returns tiny class based on weight', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.setWeightKlass(3)).to.equal('tag-tiny')
     })
 
     it('returns small class based on weight', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.setWeightKlass(8)).to.equal('tag-small')
     })
 
     it('returns medium class based on weight', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.setWeightKlass(14)).to.equal('tag-medium')
     })
 
     it('returns big class based on weight', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.setWeightKlass(18)).to.equal('tag-big')
     })
 
     it('returns huge class based on weight', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.setWeightKlass(24)).to.equal('tag-huge')
@@ -84,36 +83,35 @@ describe('<ReactTaggable />', () => {
   });
 
   describe('#weightFor', () => {
+    let tags;
+    beforeEach(() => {
+      tags = {'Car': 5};
+    });
     it('returns the minimum weight for the tiny class name', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.weightFor('tiny')).to.equal(5)
     });
 
     it('returns the minimum weight for the small class name', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.weightFor('small')).to.equal(10)
     });
 
     it('returns the minimum weight for the medium class name', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.weightFor('medium')).to.equal(15)
     });
 
     it('returns the minimum weight for the big class name', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.weightFor('big')).to.equal(20)
     });
 
     it('returns the minimum weight for the huge class name', () => {
-      const tags = {'Car': 5};
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
       expect(wrapper.weightFor('huge')).to.equal(30)

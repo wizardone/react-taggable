@@ -25,8 +25,8 @@ export default class ReactTaggable extends React.Component {
     return klass;
   }
 
-  _weightFor(){
-
+  weightFor(klass){
+    return this.weights[klass];
   }
 
   render(){

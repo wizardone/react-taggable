@@ -10,7 +10,7 @@ export default class ReactTaggable extends React.Component {
   }
 
   setWeightKlass(weight){
-    let klass = '';
+    let klass = 'tag-default';
     if(weight <= 5){
       klass = 'tag-tiny'
     } else if(weight > 5 && weight <= 10){
@@ -19,13 +19,13 @@ export default class ReactTaggable extends React.Component {
       klass = 'tag-medium'
     } else if(weight > 15 && weight <= 20){
       klass = 'tag-big'
-    } else {
+    } else if(weight > 20){
       klass = 'tag-huge'
     }
     return klass;
   }
 
-  validateWeights(){
+  _weightFor(){
 
   }
 

@@ -28,6 +28,13 @@ export default class ReactTaggable extends React.Component {
     return this.state[klass]
   }
 
+  _validateWeight(){
+    return (this.state.tiny < this.state.small) &&
+      (this.state.small < this.state.medium) &&
+      (this.state.medium < this.state.big) &&
+      (this.state.big < this.state.huge)
+  }
+
   render(){
     const { tags } = this.props;
     return (

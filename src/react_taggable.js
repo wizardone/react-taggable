@@ -6,6 +6,9 @@ export default class ReactTaggable extends React.Component {
   constructor(props){
     super(props);
     this.state = props.weights;
+    if(!this._validateWeight()){
+      throw "You supplied a wrong set of weights for your tags. Please check the README";
+    }
   }
 
   setWeightKlass(weight){
@@ -30,9 +33,9 @@ export default class ReactTaggable extends React.Component {
 
   _validateWeight(){
     return (this.state.tiny < this.state.small) &&
-      (this.state.small < this.state.medium) &&
-      (this.state.medium < this.state.big) &&
-      (this.state.big < this.state.huge)
+           (this.state.small < this.state.medium) &&
+           (this.state.medium < this.state.big) &&
+           (this.state.big < this.state.huge)
   }
 
   render(){

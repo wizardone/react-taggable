@@ -117,4 +117,21 @@ describe('<ReactTaggable />', () => {
       expect(wrapper.weightFor('huge')).to.equal(30)
     });
   });
+
+  describe('#_validateWeight', () => {
+    it('returns true - the weights are accurate', () => {
+      const tags = {'Car': 5};
+      const weights = {tiny: 5, small: 10, medium: 15, big: 20, huge: 25};
+      const wrapper = shallow(<ReactTaggable tags={tags} weights={weights}/>).instance();
+
+      expect(() => { shallow(<ReactTaggable tags={tags} weights={weights}/>).instance() }).to.not.throw();
+    });
+
+    it('returns false - the weights are not accurate', () => {
+      const tags = {'Car': 5};
+      const weights = {tiny: 5, small: 50, medium: 15, big: 30, huge: 65};
+
+      expect(() => { shallow(<ReactTaggable tags={tags} weights={weights}/>).instance() }).to.throw();
+    });
+  });
 })

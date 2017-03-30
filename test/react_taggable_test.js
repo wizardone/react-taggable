@@ -78,7 +78,7 @@ describe('<ReactTaggable />', () => {
     it('returns huge class based on weight', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
-      expect(wrapper.setWeightKlass(24)).to.equal('tag-huge')
+      expect(wrapper.setWeightKlass(34)).to.equal('tag-huge')
     })
   });
 
@@ -90,31 +90,31 @@ describe('<ReactTaggable />', () => {
     it('returns the minimum weight for the tiny class name', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
-      expect(wrapper.weightFor('tiny')).to.equal(5)
+      expect(wrapper._weightFor('tiny')).to.equal(5)
     });
 
     it('returns the minimum weight for the small class name', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
-      expect(wrapper.weightFor('small')).to.equal(10)
+      expect(wrapper._weightFor('small')).to.equal(10)
     });
 
     it('returns the minimum weight for the medium class name', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
-      expect(wrapper.weightFor('medium')).to.equal(15)
+      expect(wrapper._weightFor('medium')).to.equal(15)
     });
 
     it('returns the minimum weight for the big class name', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
-      expect(wrapper.weightFor('big')).to.equal(20)
+      expect(wrapper._weightFor('big')).to.equal(20)
     });
 
     it('returns the minimum weight for the huge class name', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
 
-      expect(wrapper.weightFor('huge')).to.equal(30)
+      expect(wrapper._weightFor('huge')).to.equal(30)
     });
   });
 

@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import ReactTaggable from './src/react_taggable'
 
-const tags = {
-  "Antenna": 5,
-  "Car": 10,
-  "TV": 2
-}
+const tags = [
+  { name: 'XBOX', times: 243, link: 'http://example.com/?search=xbox' },
+  { name: 'Playstation', times: 43, link: 'http://example.com/?search=playstation' },
+  { name: 'IPad', times: 143, link: 'http://example.com/?search=ipad' }
+]
 
 const weights = {
   tiny: 5,

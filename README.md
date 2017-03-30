@@ -15,13 +15,13 @@ tags must be a object with the tags that you want to visualize and the
 number of their occurences. For example if you keep track of the most
 searched items within your system:
 ```javascript
-const tags = {
-  "xbox": 55,
-  "playstation": 24,
-  "ipad": 2
-}
+const tags = [
+  { name: 'XBOX', times: 243, link: 'http://example.com/?search=xbox' },
+  { name: 'Playstation', times: 43, link: 'http://example.com/?search=playstation' },
+  { name: 'IPad', times: 143, link: 'http://example.com/?search=ipad' }
+]
 ```
-The component relies on several weight rules: tiny, small, medium, big,
+The component relies on the following weight rules: tiny, small, medium, big,
 huge. You can pass the weights object to the component to change them.
 ```javascript
 const weights = {

@@ -42,8 +42,8 @@ export default class ReactTaggable extends React.Component {
     const { tags } = this.props;
     return (
       <div id="taggable-div">
-        {Object.keys(tags).map((tag) => {
-          return (<a key={tag} className={this.setWeightKlass(tags[tag])}>{tag}</a>)
+      {tags.map((tag) => {
+          return (<a key={tag.name} href={tag.link} className={this.setWeightKlass(tag.times)}>{tag.name}</a>)
         })}
       </div>
     )

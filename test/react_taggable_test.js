@@ -4,8 +4,14 @@ import { expect } from 'chai';
 import ReactTaggable from '../src/react_taggable.js';
 
 describe('<ReactTaggable />', () => {
+  let tags;
+    beforeEach(() => {
+      tags = [
+        { name: 'XBOX', times: 4, link: 'http://example.com/?search=xbox' },
+        { name: 'Playstation', times: 43, link: 'http://example.com/?search=playstation' }
+      ];
+    });
   it('renders the component structure', () => {
-    const tags = {'Car': 5}
     const wrapper = shallow(<ReactTaggable tags={tags}/>);
     expect(wrapper.matchesElement(
       <div id="taggable-div">
@@ -15,7 +21,6 @@ describe('<ReactTaggable />', () => {
   });
 
   it('has default weights assigned', () => {
-    const tags = {'Car': 5}
     const wrapper = shallow(<ReactTaggable tags={tags}/>);
     const props = wrapper.instance().props
 
@@ -27,7 +32,6 @@ describe('<ReactTaggable />', () => {
   });
 
   it('overwrites the default weight properties', () => {
-    const tags = {'Car': 5}
     const weights = {'tiny': 20, 'small': 50, 'medium': 80, 'big': 140, 'huge': 190}
     const wrapper = shallow(<ReactTaggable tags={tags} weights={weights}/>);
     const props = wrapper.instance().props
@@ -42,7 +46,7 @@ describe('<ReactTaggable />', () => {
   describe('#setWeightKlass', () => {
     let tags;
     beforeEach(() => {
-      tags = {'Car': 5};
+      tags = [{ name: 'XBOX', times: 4, link: 'http://example.com/?search=xbox' }];
     });
 
     it('returns the default class based on weight', () => {
@@ -85,7 +89,7 @@ describe('<ReactTaggable />', () => {
   describe('#weightFor', () => {
     let tags;
     beforeEach(() => {
-      tags = {'Car': 5};
+      tags = [{ name: 'XBOX', times: 4, link: 'http://example.com/?search=xbox' }];
     });
     it('returns the minimum weight for the tiny class name', () => {
       const wrapper = shallow(<ReactTaggable tags={tags}/>).instance();
@@ -119,8 +123,11 @@ describe('<ReactTaggable />', () => {
   });
 
   describe('#_validateWeight', () => {
+    let tags;
+    beforeEach(() => {
+      tags = [{ name: 'XBOX', times: 4, link: 'http://example.com/?search=xbox' }];
+    });
     it('returns true - the weights are accurate', () => {
-      const tags = {'Car': 5};
       const weights = {tiny: 5, small: 10, medium: 15, big: 20, huge: 25};
       const wrapper = shallow(<ReactTaggable tags={tags} weights={weights}/>).instance();
 
@@ -128,7 +135,6 @@ describe('<ReactTaggable />', () => {
     });
 
     it('returns false - the weights are not accurate', () => {
-      const tags = {'Car': 5};
       const weights = {tiny: 5, small: 50, medium: 15, big: 30, huge: 65};
 
       expect(() => { shallow(<ReactTaggable tags={tags} weights={weights}/>).instance() }).to.throw();

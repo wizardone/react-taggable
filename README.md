@@ -35,3 +35,11 @@ const weights = {
 Each value defines the upper boundary of the corresponding class. When
 providing your own weights you must follow the rule:
 `tiny < small < medium < big < huge` otherwise an error will be thrown.
+If you use the above setup you will end up having html like this:
+```html
+<div id="taggable-div">
+  <a className='tag-huge' href="http://example.com/?search=xbox" key='XBOX'>XBOX</a>
+  <a className='tag-small' href="http://example.com/?search=playstation" key='Playstation'>Playstation</a>
+  <a className='tag-big' href="http://example.com/?search=ipad" key='IPad'>IPad</a>
+</div>
+```

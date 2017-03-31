@@ -8,14 +8,15 @@ describe('<ReactTaggable />', () => {
     beforeEach(() => {
       tags = [
         { name: 'XBOX', times: 4, link: 'http://example.com/?search=xbox' },
-        { name: 'Playstation', times: 43, link: 'http://example.com/?search=playstation' }
+        { name: 'Playstation', times: 17, link: 'http://example.com/?search=playstation' }
       ];
     });
   it('renders the component structure', () => {
     const wrapper = shallow(<ReactTaggable tags={tags}/>);
     expect(wrapper.matchesElement(
       <div id="taggable-div">
-        <a className='tag-tiny' key='Car'>Car</a>
+        <a className='tag-tiny' href="http://example.com/?search=xbox" key='XBOX'>XBOX</a>
+        <a className='tag-big' href="http://example.com/?search=playstation" key='Playstation'>Playstation</a>
       </div>
     )).to.equal(true);
   });

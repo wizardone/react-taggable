@@ -2,11 +2,11 @@
   "name": "react-taggable",
   "version": "1.0.0",
   "description": "tags visualization",
-  "main": "./dist/bundle.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "lint": "lint",
-    "build": "webpack",
+    "build": "webpack --config webpack.config.js",
     "build_dev": "webpack --config sample.webpack.config.js",
     "dev": "webpack-dev-server --config sample.webpack.config.js --open"
   },

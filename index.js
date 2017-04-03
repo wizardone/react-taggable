@@ -1,5 +1,3 @@
-import ReactTaggable from './src/react_taggable'
+import ReactTaggable from './src/react_taggable';
 
-export {
-  ReactTaggable
-}
+module.exports = ReactTaggable;

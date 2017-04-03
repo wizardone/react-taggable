@@ -3,6 +3,8 @@
 
 ### Visualising tags with React
 A React component that applies different styles to tag input.
+Please not that it does not come bundled. It is just the component, no
+other libraries attached. You need to have React
 
 You can use it like this:
 
